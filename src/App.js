@@ -32,6 +32,20 @@ function App() {
     setSecondCount(secondCount + value);
   }
 
+  const onClickFirstSeparator = (value) => {
+    if (firstCount.includes(value)) {
+      return
+    }
+    return setFirstCount(firstCount + value)
+  }
+
+  const onClickSecondSeparator = (value) => {
+    if (secondCount.includes(value)) {
+      return
+    }
+    return setSecondCount(secondCount + value)
+  }
+
   const eventResult = () => {
     switch(operator) {
       case '+':
@@ -62,6 +76,7 @@ function App() {
             <Button text={7} onClick={() => onClickFirstCount('7')}/>
             <Button text={8} onClick={() => onClickFirstCount('8')}/>
             <Button text={9} onClick={() => onClickFirstCount('9')}/>
+            <Button text='.' onClick={() => onClickFirstSeparator('.')}/>
             <Button text={0} onClick={() => onClickFirstCount('0')}/>
             <Button text='Clear' onClick={() => setFirstCount('0')}/>
           </div>
@@ -90,6 +105,7 @@ function App() {
             <Button text={7} onClick={() => onClickSecondCount('7')}/>
             <Button text={8} onClick={() => onClickSecondCount('8')}/>
             <Button text={9} onClick={() => onClickSecondCount('9')}/>
+            <Button text='.' onClick={() => onClickSecondSeparator('.')}/>
             <Button text={0} onClick={() => onClickSecondCount('0')}/>
             <Button text='Clear' onClick={() => setSecondCount('0')}/>
           </div>
