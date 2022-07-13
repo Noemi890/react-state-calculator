@@ -25,11 +25,11 @@ function App() {
 
   const onClickSecondCount = (value) => {
   if (defaultSecondCount) {
-      setSecondCount(value);
-      return;
+      setSecondCount(value)
+      return
     }
 
-    setSecondCount(secondCount + value);
+    setSecondCount(secondCount + value)
   }
 
   const onClickFirstSeparator = (value) => {
